@@ -8,8 +8,11 @@ jobs:
     Explore-Github-Actions:
         runs-on: ubuntu-latest
         steps:
-            - name: First Steps
+            - name: First Step
+              env:
+                NAME: "Hasib"
               run: |
                 echo "Hello World"
+                echo ${{ env.NAME }}
 
 
