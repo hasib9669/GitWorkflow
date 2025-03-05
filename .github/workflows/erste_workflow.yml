@@ -2,14 +2,17 @@ name: Erste Workflow
 on:
     push:
         branches:
-            -production
+            - production
 
 jobs: 
     Explore-Github-Actions:
         runs-on: ubuntu-latest
         steps:
-            - name: First Steps
-            run: |
+            - name: First Step
+              env:
+                NAME: "Hasib"
+              run: |
                 echo "Hello World"
+                echo $ {{ env.Name }}
 
 
