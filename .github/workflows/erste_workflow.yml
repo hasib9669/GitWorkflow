@@ -2,14 +2,14 @@ name: Erste Workflow
 on:
     push:
         branches:
-            -production
+            - production
 
 jobs: 
     Explore-Github-Actions:
         runs-on: ubuntu-latest
         steps:
             - name: First Steps
-            run: |
+              run: |
                 echo "Hello World"
 
 
