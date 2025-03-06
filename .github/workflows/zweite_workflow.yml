@@ -18,6 +18,8 @@ jobs:
             - name: Repository als 7zip komprimieren
               run: | 
                 7z a -t7z ${{env.ZIP_FILE}} ./Introduction 
+            - name: Abschlussmeldung
+              run: echo "Alles wurde erfolgreich abgeschlossen"
     Abschlussmeldung: 
         runs-on: windows-latest
         steps:
