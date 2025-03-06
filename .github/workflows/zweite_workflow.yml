@@ -1,0 +1,19 @@
+
+
+name: Zweite Workflow 
+on:
+    workflow_dispatch:
+
+jobs:
+    Explore-Github-Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 7zip installieren
+              run: |
+                sudo apt-get install p7zip-full -y
+            - name: Repository klonen
+              run: |
+                git clone https://github.com/hasib9669/Introduction.git
+            - name: Repository als 7zip komprimieren
+              run: | 
+                7z a -t7z Introduction
